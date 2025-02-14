@@ -1,0 +1,75 @@
+/* Reset margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set body dimensions, font, and background color */
+body {
+    height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    width: 100vw; /* Set the width of the body to 100% of the viewport width */
+    font-family: 'Poppins', sans-serif; /* Set the font family for the body */
+    background-color: #a79c9c; /* Set the background color for the body */
+}
+.calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #4ea8f7;
+}
+.calculator .form-control {
+    text-align: right;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.keys-container .keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #68ddea;
+    border-radius: 35px;
+    transition: background-color 0.3s;
+}
+.keys-container .keys:hover {
+    background-color: #8cd4dc;
+}
+.keys-container .keys:active {
+    background-color: #92dbe3;
+}
+.keys-container .keys.operator {
+    background-color: #48A6A7;
+    color: white;
+}
+.keys-container .keys.operator:hover {
+    background-color: #95eaeb;
+}
+.keys-container .keys.operator:active {
+    background-color: #48A6A7;
+}
+.keys-container .keys.equal {
+    background-color: #2973B2;
+    color: white;
+}
+.keys-container .keys.equal:hover {
+    background-color: #155791;
+}
+.keys-container .keys.equal:active {
+    background-color: #2973B2;
+}
+.keys-container .keys.clear {
+    background-color: #e74c3c;
+    color: white;
+}
+.keys-container .keys.clear:hover {
+    background-color: #c0392b;
+}
+.keys-container .keys.clear:active {
+    background-color: #a93226;
+}
+
