@@ -5,6 +5,9 @@ let keys = keysContainer.querySelectorAll('.keys');
 keys.forEach(key => {
     key.classList.add('my-1');
     key.addEventListener('click', function () {
+        if(expressionInput.textContent === 'Error pls provide valid expression'){ 
+            expressionInput.textContent = '';
+        }
         let keyValue = key.textContent.trim();
         
         if (keyValue === '=') {
@@ -22,8 +25,15 @@ keys.forEach(key => {
 });
 
 window.addEventListener('keydown', function (event) {    
+    
+    if(expressionInput.textContent === 'Error pls provide valid expression'){ 
+        expressionInput.textContent = '';
+    }
+
     let keyValue = event.key;
     
+
+
     if (keyValue === 'Enter') {
         try {
             expressionInput.textContent = eval(expressionInput.textContent);
