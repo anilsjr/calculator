@@ -1,24 +1,33 @@
 /* Reset margin, padding, and box-sizing for all elements */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 /* Set body dimensions, font, and background color */
+
 body {
-    height: 100vh; /* Set the height of the body to 100% of the viewport height */
-    width: 100vw; /* Set the width of the body to 100% of the viewport width */
-    font-family: 'Poppins', sans-serif; /* Set the font family for the body */
-    background-color: #a79c9c; /* Set the background color for the body */
+    margin: 0;
+    padding: 10px;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    background-color: #0c2d63 !important; /* Dark but not too harsh */
+    color: #fff; /* Ensures text is visible on dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 .calculator {
-    max-width: 400px;
+    max-width: 350px !important;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #4ea8f7;
+    box-shadow: 5px 5px 10px  rgb(0, 0, 0 ,0.5);
+    background-color: #2589e1;
 }
 .calculator .form-control {
     text-align: right;
@@ -29,28 +38,38 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 30px;
     font-size: 1.5rem;
     cursor: pointer;
     background-color: #68ddea;
-    border-radius: 35px;
+    border-radius: 25px;
     transition: background-color 0.3s;
+    transition: box-shadow 0.2s;
+
 }
 .keys-container .keys:hover {
     background-color: #8cd4dc;
+    box-shadow: 0 0  2px 2px rgba(0, 0, 0, 0.5);
+
+
 }
 .keys-container .keys:active {
     background-color: #92dbe3;
+    box-shadow: 0 0  2px 2px rgba(0, 0, 0, 0.5);
+
 }
 .keys-container .keys.operator {
-    background-color: #48A6A7;
+    background-color: #48A6A7;    
     color: white;
 }
 .keys-container .keys.operator:hover {
     background-color: #95eaeb;
+    box-shadow: 0 0  2px 2px rgba(0, 0, 0, 0.5);
 }
 .keys-container .keys.operator:active {
     background-color: #48A6A7;
+    box-shadow: 0 0  2px 2px rgba(0, 0, 0, 0.5);
+
 }
 .keys-container .keys.equal {
     background-color: #2973B2;
@@ -72,4 +91,3 @@ body {
 .keys-container .keys.clear:active {
     background-color: #a93226;
 }
-

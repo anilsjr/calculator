@@ -2,6 +2,7 @@ let expressionInput = document.getElementById('expression');
 let keysContainer = document.querySelector('.keys-container');
 let keys = keysContainer.querySelectorAll('.keys');
 
+expressionInput.style.fontSize = "12px";
 keys.forEach(key => {
     key.classList.add('my-1');
     key.addEventListener('click', function () {
